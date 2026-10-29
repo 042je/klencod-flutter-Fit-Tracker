@@ -1803,9 +1803,7 @@ class _RunCard extends StatelessWidget {
                 style: tt.titleMedium),
             const SizedBox(height: 8),
             Text(fmtDuration(state.runSeconds),
-                style: tt.displayMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    fontFeatures: const [FontFeature.tabularFigures()])),
+                style: tt.displayMedium?.copyWith(fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -3034,7 +3032,7 @@ class _CalorieCalculatorState extends State<_CalorieCalculator> {
   double _activity = 1.55;
   int _goal = 0; // -1 إنقاص، 0 ثبات، 1 بناء
 
-  static const _activities = <double, String>{
+  static final _activities = <double, String>{
     1.2: 'خامل (مكتبي)',
     1.375: 'خفيف (1-3 أيام)',
     1.55: 'متوسط (3-5 أيام)',
